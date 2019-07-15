@@ -12,11 +12,24 @@
         </div>
     </div>
 
-    <ion-slides [options]="optionsSlide">
-        <ion-slide *ngFor="let aux of letNoticias">
-            <img [src]="aux.url">
+    <div class="divTitulo">
+        <p>Notícias</p>
+        <div class="divBarra"></div>
+    </div>
+
+    <ion-slides [options]="optionsSlide" class="slidesNoticia">
+        <ion-slide *ngFor="let aux of listNoticias">
+            <div class="divCinza"></div>
+            <img [src]="aux.url" class="imgNoticia">
             <p class="pTituloNoticia">{{aux.titulo}}</p>
         </ion-slide>
+
+        <div class="divSetaEsquerda">
+            <ion-icon name="ios-arrow-dropleft"></ion-icon>
+        </div>
+        <div class="divSetaDireita">
+            <ion-icon name="ios-arrow-dropright"></ion-icon>
+        </div>
     </ion-slides>
 
     <app-rodape></app-rodape>

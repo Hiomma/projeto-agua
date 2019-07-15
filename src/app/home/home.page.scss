@@ -3,6 +3,9 @@
     --background: linear-gradient(to right, #2a3b72, #1e4a7e, #105889, #046691, #0b7497);
     border-radius: 25px;
     color: white;
+    height: 50px;
+    width: 200px;
+    font-size: 22px;
 }
 
 .pTitulo {
@@ -34,4 +37,66 @@
 .imgSlide {
     height: 694px;
     width: 1920px;
+}
+
+.slidesNoticia {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.pTituloNoticia {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: white;
+    font-size: 25px;
+}
+
+.divCinza {
+    height: 402px;
+    width: 520px;
+    position: absolute;
+    background: rgba(30, 30, 30, 0.5);
+}
+
+.imgNoticia {
+    height: 402px;
+    width: 520px;
+    object-fit: cover;
+}
+
+.divTitulo {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #2A3B72;
+    font-weight: 500;
+    justify-content: center;
+    display: flex;
+}
+
+.divBarra {
+    border-bottom: 1px solid #2A3B72;
+    width: 300px;
+    height: 1px;
+    position: absolute;
+    margin-top: 85px;
+}
+
+.divSetaEsquerda {
+    position: absolute;
+    font-size: 70px;
+    color: #2A3B72;
+    top: 150px;
+    left: -70px;
+}
+
+.divSetaDireita {
+    position: absolute;
+    font-size: 70px;
+    color: #2A3B72;
+    top: 150px;
+    right: -70px;
 }
