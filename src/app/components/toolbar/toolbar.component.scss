@@ -1,0 +1,21 @@
+.divToolbar {
+    background-image: linear-gradient(to right, #00abdd, #059dcb, #088eb9, #0a81a8, #0b7397);
+    display: inline-flex;
+    width: 100%;
+    height: 110px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.buttonToolbar {
+    color: white;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.divBotoes {
+    text-align: end;
+    width: 100%;
+    padding-top: 10px;
+}

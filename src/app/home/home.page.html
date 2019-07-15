@@ -1,14 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <app-toolbar></app-toolbar>
+    <div class="divImagem">
+        <img class="imgSlide" src="../../assets/imgs/slide.jpg">
+
+        <div class="divImagemTexto">
+
+            <p class="pTitulo">ATITUDES SUSTENTÁVEIS</p>
+            <p class="pSubtitulo">PRESERVAM O FUTURO</p>
+
+            <ion-button shape="round" class="buttonSaibaMais">Saiba mais</ion-button>
+        </div>
+    </div>
+
+    <ion-slides [options]="optionsSlide">
+        <ion-slide *ngFor="let aux of letNoticias">
+            <img [src]="aux.url">
+            <p class="pTituloNoticia">{{aux.titulo}}</p>
+        </ion-slide>
+    </ion-slides>
+
+    <app-rodape></app-rodape>
 </ion-content>
