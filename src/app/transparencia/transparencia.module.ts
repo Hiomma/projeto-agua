@@ -6,21 +6,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TransparenciaPage } from './transparencia.page';
+import { ComponentsModule } from '../components/components.module';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: TransparenciaPage
-  }
+    {
+        path: '',
+        component: TransparenciaPage
+    }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [TransparenciaPage]
+    imports: [
+        CommonModule,
+        ComponentsModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes)
+    ],
+    declarations: [TransparenciaPage]
 })
-export class TransparenciaPageModule {}
+export class TransparenciaPageModule { }

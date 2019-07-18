@@ -1,0 +1,20 @@
+<div *ngIf="sobre">
+    <div class="divMenu" (click)="abrirPagina('somos')">
+        <p>Quem Somos</p>
+    </div>
+    <div class="divMenu" (click)="abrirPagina('missao')">
+        <p>Missão</p>
+    </div>
+    <div class="divMenu" (click)="abrirPagina('objetivo')">
+        <p>Objetivo</p>
+    </div>
+</div>
+
+<div *ngIf="!sobre">
+    <div class="divMenu" (click)="abrirUrl('')">
+        <p>Estatuto</p>
+    </div>
+    <div class="divMenu" (click)="abrirUrl('')">
+        <p>Ata de Fundação</p>
+    </div>
+</div>

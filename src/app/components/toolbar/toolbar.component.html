@@ -5,11 +5,13 @@
                 <img class="imgLogo" src="../../../assets/imgs/logo.png">
             </div>
             <div class="divBotoes">
-                <ion-button fill="clear" class="buttonToolbar">Quem Somos</ion-button>
-                <ion-button fill="clear" class="buttonToolbar">O que fazemos</ion-button>
-                <ion-button fill="clear" class="buttonToolbar">Transparência</ion-button>
-                <ion-button fill="clear" class="buttonToolbar">Parceiros</ion-button>
-                <ion-button fill="clear" class="buttonToolbar">Contato</ion-button>
+                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('sobre', $event)">Sobre</ion-button>
+                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('noticia')">Notícias</ion-button>
+                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('transparencia', $event)">
+                    Transparência
+                </ion-button>
+                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('parceiros')">Parceiros</ion-button>
+                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('contato')">Contato</ion-button>
             </div>
         </div>
     </ion-toolbar>
