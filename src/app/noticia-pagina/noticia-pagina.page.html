@@ -1,0 +1,29 @@
+<ion-content>
+    <app-toolbar></app-toolbar>
+
+    <div>
+        <p class="pTituloPagina">Notícias</p>
+        <img src="../../assets/imgs/paisagem.jpg" class="imgTituloPagina">
+        <div class="divBackgroundCinza"></div>
+    </div>
+
+    <ion-grid class="gridNoticias">
+
+        <ion-row>
+            <ion-col size="4" (click)="abrirNoticia(aux)">
+                <img class="imgNoticias" src="../../assets/imgs/noticia2.png">
+                <p class="pTituloNoticia">Assinatura de acordo de cooperação com o Governo do Espírito Santo para recuperação
+                    da Bacia Hidrográfica do Rio Itapemirim</p>
+                <div class="backgroundCinzaNoticia"></div>
+            </ion-col>
+            <!-- <ion-col size="4" (click)="abrirNoticia(aux)">
+                <img class="imgNoticias" src="aux.imagem">
+                <p class="pTitulo">aux.titulo</p>
+                <div class="backgroundCinzaNoticia"></div>
+            </ion-col> -->
+        </ion-row>
+    </ion-grid>
+
+
+    <app-rodape></app-rodape>
+</ion-content>

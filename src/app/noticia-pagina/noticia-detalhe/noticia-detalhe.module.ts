@@ -1,29 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ContatoPage } from './contato.page';
-import { ComponentsModule } from '../components/components.module';
+import { NoticiaDetalhePage } from './noticia-detalhe.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 const routes: Routes = [
     {
-        path: '',
-        component: ContatoPage
+        path: ':url',
+        component: NoticiaDetalhePage
     }
 ];
 
 @NgModule({
     imports: [
-        ComponentsModule,
         CommonModule,
         FormsModule,
-        ReactiveFormsModule,
         IonicModule,
+        ComponentsModule,
         RouterModule.forChild(routes)
     ],
-    declarations: [ContatoPage]
+    declarations: [NoticiaDetalhePage]
 })
-export class ContatoPageModule { }
+export class NoticiaDetalhePageModule { }

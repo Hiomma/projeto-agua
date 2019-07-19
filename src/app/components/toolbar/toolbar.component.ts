@@ -32,4 +32,8 @@ export class ToolbarComponent implements OnInit {
         }
     }
 
+    fecharPopover() {
+        this.popoverController.dismiss();
+    }
+
 }

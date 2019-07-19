@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams, PopoverController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-menu-toolbar',
@@ -24,4 +25,7 @@ export class MenuToolbarComponent implements OnInit {
         this.pop.dismiss();
     }
 
+    abrirUrl(url: string) {
+        window.open(environment.api + url, "_blank");
+    }
 }

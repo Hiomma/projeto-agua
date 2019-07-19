@@ -10,7 +10,7 @@
 
 .buttonToolbar {
     color: white;
-    font-weight: 100;
+    font-weight: bold;
     font-size: 18px;
 }
 
@@ -18,4 +18,8 @@
     text-align: end;
     width: 100%;
     padding-top: 10px;
+}
+
+.imgLogo{
+    cursor: pointer;
 }

@@ -10,8 +10,124 @@
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
 
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    src: url('assets/fonts/Montserrat/Montserrat-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 200;
+    src: url('assets/fonts/Montserrat/Montserrat-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url('assets/fonts/Montserrat/Montserrat-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('assets/fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: semi-bold;
+    font-weight: 600;
+    src: url('assets/fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-weight: 700;
+    src: url('assets/fonts/Montserrat/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: extra-bold;
+    font-weight: 800;
+    src: url('assets/fonts/Montserrat/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: bolder;
+    font-weight: 900;
+    src: url('assets/fonts/Montserrat/Montserrat-Black.ttf');
+}
+
+
 .popoverToolbar .popover-viewport {
     background-image: linear-gradient(to right, #00abdd, #059dcb, #088eb9, #0a81a8, #0b7397);
     color: white;
+    cursor: pointer;
+}
+
+.imgTituloPagina {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
+.pTituloPagina {
+    position: absolute;
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00abdd;
+    margin-left: 100px;
+    margin-top: 124px;
+    z-index: 99;
+}
+
+.divBackgroundCinza {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    background: rgba(30, 30, 30, 0.5);
+    top: 110px;
+}
+
+.divConteudoPagina {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 50px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.divSetaEsquerda {
+    position: absolute;
+    font-size: 70px;
+    color: #2A3B72;
+    top: 150px;
+    left: -70px;
+    cursor: pointer;
+}
+
+.divSetaDireita {
+    position: absolute;
+    font-size: 70px;
+    color: #2A3B72;
+    top: 150px;
+    right: -70px;
     cursor: pointer;
 }
