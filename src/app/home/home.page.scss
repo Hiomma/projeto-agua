@@ -54,15 +54,9 @@
 
 .divCinza {
     height: 402px;
-    width: 520px;
+    width: 100%;
     position: absolute;
     background: rgba(30, 30, 30, 0.5);
-}
-
-.imgNoticia {
-    height: 402px;
-    width: 520px;
-    object-fit: cover;
 }
 
 .divTitulo {
@@ -84,4 +78,21 @@
 }
 
 
+.imgNoticia {
+    width: 520px;
+    height: 402px;
+    // object-fit: cover;
+}
 
+
+.pTituloNoticia {
+    position: absolute;
+    bottom: 60px;
+    color: white;
+    left: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    width: calc(100% - 70px);
+    text-align: justify;
+    z-index: 99;
+}

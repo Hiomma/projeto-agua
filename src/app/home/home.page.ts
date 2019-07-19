@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -14,6 +15,11 @@ export class HomePage {
         { titulo: "Teste", url: "../../assets/imgs/noticia.png" }
     ]
 
-    constructor() { }
+    constructor(private route: Router) { }
+
+    abrirNoticia(aux) {
+        // this.route.navigate(["noticia-detalhe/" + aux.url]);
+        this.route.navigate(["noticia-detalhe/" + 1]);
+    }
 
 }

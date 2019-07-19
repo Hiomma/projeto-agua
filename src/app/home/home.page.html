@@ -18,10 +18,17 @@
     </div>
 
     <ion-slides [options]="optionsSlide" class="slidesNoticia">
-        <ion-slide *ngFor="let aux of listNoticias">
+        <!-- <ion-slide *ngFor="let aux of listNoticias">
             <div class="divCinza"></div>
             <img [src]="aux.url" class="imgNoticia">
             <p class="pTituloNoticia">{{aux.titulo}}</p>
+        </ion-slide> -->
+        <ion-slide (click)="abrirNoticia(aux)">
+            <img class="imgNoticias" src="../../assets/imgs/noticia2.png">
+            <p class="pTituloNoticia">Assinatura de acordo de cooperação com o Governo do Espírito Santo para
+                recuperação
+                da Bacia Hidrográfica do Rio Itapemirim</p>
+            <div class="divCinza"></div>
         </ion-slide>
 
         <div class="divSetaEsquerda">
