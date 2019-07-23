@@ -15,9 +15,10 @@ import { ModalImagemComponent } from 'src/app/components/modal-imagem/modal-imag
 export class NoticiaDetalhePage implements OnInit {
 
     @ViewChild('slideFoto') slideFoto: IonSlides
-    
-    optionsSlide = { slidesPerView: 3, spaceBetween: 20 }
+
+    optionsSlide: any = { slidesPerView: 3, spaceBetween: 20 }
     noticia: any;
+    width = self.innerWidth;
 
     constructor(
         // private graphql: GraphQlService,
@@ -38,6 +39,10 @@ export class NoticiaDetalhePage implements OnInit {
         //     console.log(this.noticia)
 
         // })
+
+        if (this.width < 1000) {
+            this.optionsSlide = { slidesPerView: 1 }
+        }
     }
 
     async abrirImagem() {
@@ -53,7 +58,7 @@ export class NoticiaDetalhePage implements OnInit {
             this.slideFoto.lockSwipes(false);
             this.slideFoto.slideNext(500);
             this.slideFoto.lockSwipes(true);
-        }else{
+        } else {
             this.slideFoto.lockSwipes(false);
             this.slideFoto.slidePrev(500);
             this.slideFoto.lockSwipes(true);

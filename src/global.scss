@@ -131,3 +131,22 @@
     right: -70px;
     cursor: pointer;
 }
+
+@media(max-width: 1000px) {
+    .divBackgroundCinza {
+        top: 56px;
+    }
+
+    .divConteudoPagina {
+        font-size: 17px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .pTituloPagina{
+        top: 140px;
+        width: 100%;
+        text-align: center;
+        margin: unset;
+    }
+}
