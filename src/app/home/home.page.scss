@@ -96,3 +96,51 @@
     text-align: justify;
     z-index: 99;
 }
+
+@media(max-width: 1000px) {
+    .imgSlide {
+        width: 100%;
+        height: 300px;
+    }
+
+    .divImagemTexto {
+        text-align: center;
+        width: 100%;
+        top: 130px;
+        left: unset;
+    }
+
+    .pTitulo {
+        font-size: 20px;
+    }
+
+    .pSubtitulo {
+        font-size: 20px
+    }
+
+    .imgNoticia {
+        width: 100%;
+    }
+
+    .slidesNoticia {
+        margin: unset;
+        padding: unset;
+    }
+
+    .pTituloNoticia {
+        font-size: 15px;
+        bottom: 0;
+    }
+
+    .divSetaEsquerda {
+        top: 100px;
+        left: 0;
+        color: white;
+    }
+
+    .divSetaDireita {
+        top: 100px;
+        right: 0;
+        color: white;
+    }
+}

@@ -1,4 +1,15 @@
-<ion-header no-border>
+<div *ngIf="width < 1000">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-buttons slot="start">
+                <ion-menu-button autoHide="false" (click)="abrirMenu()"></ion-menu-button>
+            </ion-buttons>
+            <ion-title>IPAC</ion-title>
+        </ion-toolbar>
+    </ion-header>
+</div>
+
+<ion-header no-border *ngIf="width > 1000">
     <ion-toolbar>
         <div class="divToolbar">
             <div (click)="abrirPagina('home')">
@@ -6,7 +17,8 @@
             </div>
             <div class="divBotoes">
                 <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('sobre', $event)">Sobre</ion-button>
-                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('noticia-pagina')">Notícias</ion-button>
+                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('noticia-pagina')">Notícias
+                </ion-button>
                 <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('transparencia', $event)">
                     Transparência
                 </ion-button>

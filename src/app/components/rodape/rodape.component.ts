@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class RodapeComponent implements OnInit {
 
+    width = self.innerWidth;
+
     constructor(private router: Router) { }
 
     ngOnInit() {

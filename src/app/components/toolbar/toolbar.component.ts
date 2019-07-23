@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PopoverController } from '@ionic/angular';
+import { PopoverController, MenuController } from '@ionic/angular';
 import { MenuToolbarComponent } from '../menu-toolbar/menu-toolbar.component';
 
 @Component({
@@ -10,7 +10,10 @@ import { MenuToolbarComponent } from '../menu-toolbar/menu-toolbar.component';
 })
 export class ToolbarComponent implements OnInit {
 
+    width = self.innerWidth;
+
     constructor(private popoverController: PopoverController,
+        private menu: MenuController,
         private router: Router) { }
 
     ngOnInit() {
@@ -34,6 +37,10 @@ export class ToolbarComponent implements OnInit {
 
     fecharPopover() {
         this.popoverController.dismiss();
+    }
+
+    abrirMenu() {
+        this.menu.open();
     }
 
 }
