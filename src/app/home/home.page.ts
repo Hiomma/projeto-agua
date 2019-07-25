@@ -29,4 +29,7 @@ export class HomePage implements OnInit {
         this.route.navigate(["noticia-detalhe/" + 1]);
     }
 
+    abrirSaibaMais() {
+        this.route.navigate(["/somos"]);
+    }
 }

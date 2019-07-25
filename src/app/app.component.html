@@ -1,5 +1,5 @@
 <ion-app>
-    <ion-menu menuId="celular">
+    <ion-menu contentId="content1">
         <ion-header>
             <ion-toolbar color="primary">
                 <ion-title>Menu</ion-title>
@@ -8,7 +8,7 @@
         <ion-content>
             <ion-list>
                 <ion-menu-toggle auto-hide="false" *ngFor="let p of celular">
-                    <ion-item (click)="irPagina(p.url)" style="cursor: pointer">
+                    <ion-item (click)="irPagina(p)" style="cursor: pointer">
                         <ion-icon slot="start" [name]="p.icon"></ion-icon>
                         <ion-label>
                             {{p.title}}
@@ -18,5 +18,5 @@
             </ion-list>
         </ion-content>
     </ion-menu>
-    <ion-router-outlet></ion-router-outlet>
+    <ion-router-outlet id="content1"></ion-router-outlet>
 </ion-app>

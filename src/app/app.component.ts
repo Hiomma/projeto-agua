@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -15,12 +16,12 @@ export class AppComponent {
         {
             title: 'Home',
             url: '/',
-            icon: 'ios-bookmarks'
+            icon: 'ios-home'
         },
         {
-            title: 'Quem Somos',
+            title: 'Quem Somos?',
             url: '/somos',
-            icon: 'ios-briefcase'
+            icon: 'ios-happy'
         },
         {
             title: 'Notícias',
@@ -30,45 +31,50 @@ export class AppComponent {
         {
             title: 'Missão',
             url: '/missao',
-            icon: 'ios-basket'
-        },
-        {
-            title: 'O que Fazemos?',
-            url: '/fazemos',
-            icon: 'ios-hammer'
+            icon: 'ios-clipboard'
         },
         {
             title: 'Estatuto',
-            url: '/estatuto',
-            icon: 'ios-chatboxes'
+            url: null,
+            link: 'public/pdf/estatuto.pdf',
+            icon: 'ios-document'
         },
         {
             title: 'Ata de Fundação',
-            url: '/videos-pagina',
-            icon: 'ios-videocam'
+            url: null,
+            link: 'public/pdf/ata_de_fundacao.pdf',
+            icon: 'ios-folder'
         },
         {
             title: 'Parceiros',
             url: '/parceiros',
-            icon: 'ios-chatboxes'
+            icon: 'ios-people'
         },
         {
             title: 'Contato',
             url: '/contato',
-            icon: 'ios-chatboxes'
+            icon: 'ios-mail'
         },
     ]
 
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
-        private statusBar: StatusBar
+        private menuController: MenuController,
+        private statusBar: StatusBar,
+        private router: Router
     ) {
         this.initializeApp();
+
+        this.menuController.enable(true)
     }
 
-    abrirUrl(url: string) {
-        window.open(environment.api + url, "_blank");
+    irPagina(rota: any) {
+        if (rota.url) {
+            this.router.navigate([rota.url])
+        } else {
+            window.open(environment.api + rota.link, "_blank");
+        }
     }
 
     initializeApp() {

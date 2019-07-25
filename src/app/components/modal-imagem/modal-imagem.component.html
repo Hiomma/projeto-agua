@@ -1,3 +1,29 @@
-<p>
-  modal-imagem works!
-</p>
+<ion-header>
+    <ion-toolbar class="backgroundToolbar">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="produto" (click)="voltar()"></ion-back-button>
+        </ion-buttons>Fotos
+    </ion-toolbar>
+</ion-header>
+<div class="divSlides">
+    <ion-slides #slideFoto>
+        <ion-slide>
+            <div><img src="../../../assets/imgs/noticia1.png" class="imgSlide"></div>
+        </ion-slide>
+        <ion-slide>
+            <div><img src="../../../assets/imgs/noticia2.png" class="imgSlide"></div>
+        </ion-slide>
+        <ion-slide>
+            <div><img src="../../../assets/imgs/noticia3.png" class="imgSlide"></div>
+        </ion-slide>
+        <ion-slide>
+            <div><img src="../../../assets/imgs/noticia4.png" class="imgSlide"></div>
+        </ion-slide>
+    </ion-slides>
+    <div class="divSetaEsquerda" (click)="moverSlide(false)">
+        <ion-icon name="ios-arrow-dropleft"></ion-icon>
+    </div>
+    <div class="divSetaDireita" (click)="moverSlide(true)">
+        <ion-icon name="ios-arrow-dropright"></ion-icon>
+    </div>
+</div>

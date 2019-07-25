@@ -64,6 +64,13 @@
     padding-left: 100px
 }
 
+.itemInput {
+    height: 45px;
+    margin-bottom: 20px;
+    width: 90%;
+    --border-width: 0;
+}
+
 @media(max-width: 1000px) {
     .gridContato {
         padding-left: 10px
