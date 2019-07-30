@@ -11,71 +11,27 @@
 
 
         <div>
-            <p class="pTituloNoticia">Assinatura de acordo de cooperação com o Governo do Espírito Santo para
-                recuperação
-                da Bacia Hidrográfica do Rio Itapemirim</p>
+            <p class="pTituloNoticia">{{noticia?.titulo}}</p>
             <div class="divLinhaEmbaixo"></div>
         </div>
 
-        <div class="divTextoNoticia">
-            <p>
-                Dia 11/07/2019, em Cachoeiro do Itapemirim, foi assinado o Acordo de Cooperação entre
-                Instituto Espinhaço, Governo do Estado do Espírito Santo, e organizações civis para dar
-                início ao enfrentamento dos desafios de sustentabilidade hídrica e socioeconômica da bacia
-                do Rio Itapemirim.
-            </p>
-            <p>
-                Estiveram presentes na assinatura do acordo o governador do Espírito Santo, Renato
-                Casagrande, o Diretor de Recurso Hídricos e Revitalização de Bacias Hidrográficas
-                do Ministério do Desenvolvimento Regional, Renato Saraiva Ferreira, o Secretário de Meio
-                Ambiente e Recursos Hídricos, Fabrício Machado, o Secretário de Agricultura,
-                Abastecimento, Aquicultura e Pesca, Paulo Foletto, o diretor presidente da Agência Estadual
-                de Recursos Hídricos, Fabio Ahnert, o presidente do Instituto Espinhaço, Luiz Oliveira e o
-                Diretor Coryntho Filho e os representantes do Instituto Pacto pelas Águas Capixabas, Maria
-                Helena Vargas e José Arnaldo Alencar .
-            </p>
-            <p>
-                O plano de trabalho estabelecido entre as partes, inclui metas, atividades, cronogramas,
-                define os responsáveis e estipula os resultados esperados para um período total de vigência,
-                até 2023. As ações são focadas na realização conjunta de estudos e na execução de
-                projetos e programas para a conservação da biodiversidade e dos recursos hídricos e
-                naturais, bem como na reabilitação e recuperação das paisagens, áreas e ambientes
-                degradados no meio ambiente urbano e rural.
-
-            </p>
+        <div class="divTextoNoticia" [innerHTML]="noticia?.texto">
         </div>
 
         <div style="position: relative">
             <ion-slides #slideFoto [options]="optionsSlide">
-                <ion-slide>
-                    <img class="imgNoticia" src="../../../assets/imgs/noticia1.png" (click)="abrirImagem()">
-                </ion-slide>
-                <ion-slide>
-                    <img class="imgNoticia" src="../../../assets/imgs/noticia2.png" (click)="abrirImagem()">
-                </ion-slide>
-                <ion-slide>
-                    <img class="imgNoticia" src="../../../assets/imgs/noticia3.png" (click)="abrirImagem()">
-                </ion-slide>
-                <ion-slide>
-                    <img class="imgNoticia" src="../../../assets/imgs/noticia4.png" (click)="abrirImagem()">
+                <ion-slide *ngFor="let aux of listImagens">
+                    <img class="imgNoticia" [src]="aux.url" (click)="abrirImagem()">
                 </ion-slide>
 
             </ion-slides>
-            <div class="divSetaEsquerda" (click)="moverSlide(false)">
+            <div class="divSetaEsquerda" (click)="moverSlide(false)" *ngIf="listImagens.length > 0">
                 <ion-icon name="ios-arrow-dropleft"></ion-icon>
             </div>
-            <div class="divSetaDireita" (click)="moverSlide(true)">
+            <div class="divSetaDireita" (click)="moverSlide(true)" *ngIf="listImagens.length > 0">
                 <ion-icon name="ios-arrow-dropright"></ion-icon>
             </div>
         </div>
-
-        <!-- <div class="divImagemNoticia" (click)="abrirImagem()">
-            <img [src]="noticia?.imagem" class="imgNoticia">
-            <div class="divBackgroundCinza">
-                <p class="pImagens">+50 imagens</p>
-                <p class="pSubTituloImagem">Click para Visualizar</p>
-            </div>
-        </div> -->
 
     </div>
     <app-rodape></app-rodape>

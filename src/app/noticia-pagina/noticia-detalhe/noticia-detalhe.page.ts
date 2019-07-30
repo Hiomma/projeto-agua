@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-// import { GraphQlService } from '../../services/graphql/graph-ql.service';
+import { GraphQlService } from '../../services/graphql/graph-ql.service';
 import { MenuController, ModalController, IonSlides } from '@ionic/angular';
-// import { QueryService } from '../../services/query/query.service';
+import { QueryService } from '../../services/query/query.service';
 import { ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { ModalImagemComponent } from 'src/app/components/modal-imagem/modal-imagem.component';
@@ -17,13 +17,14 @@ export class NoticiaDetalhePage implements OnInit {
     @ViewChild('slideFoto') slideFoto: IonSlides
 
     optionsSlide: any = { slidesPerView: 3, spaceBetween: 20 }
+    listImagens: Array<any> = new Array();
     noticia: any;
     width = self.innerWidth;
 
     constructor(
-        // private graphql: GraphQlService,
+        private graphql: GraphQlService,
         private menuController: MenuController,
-        // private query: QueryService,
+        private query: QueryService,
         private modal: ModalController,
         private route: ActivatedRoute) { }
 
@@ -33,12 +34,13 @@ export class NoticiaDetalhePage implements OnInit {
 
         this.slideFoto.lockSwipes(true);
 
-        // this.graphql.graphql(this.query.getNoticia(this.route.snapshot.paramMap.get("url"))).then((data: any) => {
-        //     this.noticia = data.data.noticia;
-        //     this.noticia.imagem = environment.url + this.noticia.imagem;
-        //     console.log(this.noticia)
+        this.graphql.graphql(this.query.getNoticia(this.route.snapshot.paramMap.get("url"))).then((data: any) => {
+            this.noticia = data.data.noticia;
+            this.listImagens = this.noticia.imagens;
+            this.noticia.imagem = environment.api + this.noticia.imagem;
 
-        // })
+            this.listImagens.forEach(element => { element.url = environment.api + element.url })
+        })
 
         if (this.width < 1000) {
             this.optionsSlide = { slidesPerView: 1 }

@@ -9,23 +9,16 @@
 
     <ion-grid class="gridNoticias">
 
-        <ion-row>
+        <ion-row *ngFor="let aux of listNoticias">
             <ion-col size="12" size-sm="3" (click)="abrirNoticia(aux)">
-                <img class="imgNoticias" src="../../assets/imgs/noticia2.png">
+                <img class="imgNoticias" [src]="aux.imagem">
                 <div class="backgroundCinzaNoticia"></div>
             </ion-col>
             <ion-col size="12" size-sm="8" style="border-bottom: 2px solid var(--primary);">
-                <p class="pTituloNoticia" (click)="abrirNoticia(aux)">Assinatura de acordo de cooperação com o Governo
-                    do Espírito Santo
-                    para recuperação da Bacia Hidrográfica do Rio Itapemirim</p>
+                <p class="pTituloNoticia" (click)="abrirNoticia(aux)">{{aux.manchete}}</p>
 
-                <p class="pPublicado">Publicado em: 19/07/2019</p>
+                <p class="pPublicado">Publicado em: {{aux.createdAt  | date: 'dd/MM/yyyy'}}</p>
             </ion-col>
-            <!-- <ion-col size="4" (click)="abrirNoticia(aux)">
-                <img class="imgNoticias" src="aux.imagem">
-                <p class="pTitulo">aux.titulo</p>
-                <div class="backgroundCinzaNoticia"></div>
-            </ion-col> -->
         </ion-row>
     </ion-grid>
 

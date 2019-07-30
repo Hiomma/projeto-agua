@@ -17,6 +17,7 @@ const routes: Routes = [
     { path: 'mensagem-crud', loadChildren: './painel/mensagem-crud/mensagem-crud.module#MensagemCrudModule' },
     { path: 'noticia-crud', loadChildren: './painel/noticia-crud/noticia-crud.module#NoticiaCrudModule' },
     { path: 'posicao-crud', loadChildren: './painel/posicao-crud/posicao-crud.module#PosicaoCrudModule' },
+    { path: 'parceiro-crud', loadChildren: './painel/parceiro-crud/parceiro-crud.module#ParceiroCrudModule' },
 ];
 
 @NgModule({

@@ -58,24 +58,24 @@ export class AdicionarParceiroComponent implements OnInit {
                     {
                         text: "OK",
                         handler: () => {
-                            // this.graphql.graphql(this.query.updateParceiro(Number(this.parceiro.id), this.resource.value)).then(() => {
-                            //     if (this.fotoSelecionada) {
-                            //         const fd2 = new FormData();
+                            this.graphql.graphql(this.query.updateParceiro(Number(this.parceiro.id), this.resource.value)).then(() => {
+                                if (this.fotoSelecionada) {
+                                    const fd2 = new FormData();
 
-                            //         let i = 0;
-                            //         for (let aux of this.fotoSelecionada) {
-                            //             fd2.append("image", aux, new Date().getTime() + i + "." + aux.name.split(".")[1]);
-                            //             i++;
-                            //         }
+                                    let i = 0;
+                                    for (let aux of this.fotoSelecionada) {
+                                        fd2.append("image", aux, new Date().getTime() + i + "." + aux.name.split(".")[1]);
+                                        i++;
+                                    }
 
-                            //         this.graphql.post("api/parceiro/imagem/" + this.parceiro.id, fd2).then(data => {
-                            //             this.fotoSelecionada = null;
-                            //         });
-                            //     }
+                                    this.graphql.post("api/parceiro/imagem/" + this.parceiro.id, fd2).then(data => {
+                                        this.fotoSelecionada = null;
+                                    });
+                                }
 
-                            //     this.modalController.dismiss();
-                            //     this.toast.mostrar("Parceiro atualizado com sucesso!");
-                            // })
+                                this.modalController.dismiss();
+                                this.toast.mostrar("Parceiro atualizado com sucesso!");
+                            })
                         }
                     },
                     {
@@ -93,20 +93,20 @@ export class AdicionarParceiroComponent implements OnInit {
                     {
                         text: "OK",
                         handler: () => {
-                            // this.graphql.graphql(this.query.setParceiro(this.resource.value)).then((data: any) => {
-                            //     const fd = new FormData();
+                            this.graphql.graphql(this.query.setParceiro(this.resource.value)).then((data: any) => {
+                                const fd = new FormData();
 
-                            //     for (let aux of this.fotoSelecionada) {
-                            //         fd.append("image", aux, aux.name);
-                            //     }
-                            //     this.graphql.post("api/parceiro/imagem/" + data.data.createParceiro.id, fd).then(data => {
-                            //         this.fotoSelecionada = null;
-                            //     });
+                                for (let aux of this.fotoSelecionada) {
+                                    fd.append("image", aux, aux.name);
+                                }
+                                this.graphql.post("api/parceiro/imagem/" + data.data.createParceiro.id, fd).then(data => {
+                                    this.fotoSelecionada = null;
+                                });
 
 
-                            //     this.modalController.dismiss();
-                            //     this.toast.mostrar("Parceiro criada com sucesso!");
-                            // })
+                                this.modalController.dismiss();
+                                this.toast.mostrar("Parceiro criada com sucesso!");
+                            })
                         }
                     },
                     {

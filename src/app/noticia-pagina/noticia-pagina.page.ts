@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { GraphQlService } from '../services/graphql/graph-ql.service';
+import { GraphQlService } from '../services/graphql/graph-ql.service';
 import { MenuController } from '@ionic/angular';
-// import { QueryService } from '../services/query/query.service';
+import { QueryService } from '../services/query/query.service';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 
@@ -15,27 +15,26 @@ export class NoticiaPaginaPage implements OnInit {
     listNoticias: any;
 
     constructor(
-        // private graphql: GraphQlService,
+        private graphql: GraphQlService,
         private menuController: MenuController,
         private route: Router,
-        // private query: QueryService
+        private query: QueryService
     ) { }
 
     ngOnInit() {
         this.menuController.close();
         this.menuController.enable(false);
 
-        // this.graphql.graphql(this.query.getNoticias()).then((data: any) => {
-        //     this.listNoticias = data.data.noticias;
+        this.graphql.graphql(this.query.getNoticias()).then((data: any) => {
+            this.listNoticias = data.data.noticias;
 
-        //     this.listNoticias.forEach(element => {
-        //         element.imagem = environment.url + element.imagem;
-        //     })
-        // })
+            this.listNoticias.forEach(element => {
+                element.imagem = environment.api + element.imagem;
+            })
+        })
     }
 
     abrirNoticia(aux) {
-        // this.route.navigate(["noticia-detalhe/" + aux.url]);
-        this.route.navigate(["noticia-detalhe/" + 1]);
+        this.route.navigate(["noticia-detalhe/" + aux.url]);
     }
 }

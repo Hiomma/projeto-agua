@@ -40,7 +40,8 @@ export class ToolbarComponent implements OnInit {
     }
 
     abrirMenu() {
-        this.menu.open();
+        this.menu.enable(true, "content1");
+        this.menu.open("content1");
     }
 
 }

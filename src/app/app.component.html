@@ -5,7 +5,7 @@
                 <ion-title>Menu</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content id="content1">
+        <ion-content id="content12">
             <ion-list>
                 <ion-menu-toggle auto-hide="false" *ngFor="let p of celular">
                     <ion-item (click)="irPagina(p)" style="cursor: pointer">
@@ -27,7 +27,7 @@
         <ion-content id="crud">
             <ion-list>
                 <ion-menu-toggle auto-hide="false" *ngFor="let p of crud">
-                    <ion-item (click)="irPagina(p.url)" style="cursor: pointer;">
+                    <ion-item (click)="irPagina(p)" style="cursor: pointer;">
                         <ion-icon slot="start" [name]="p.icon"></ion-icon>
                         <ion-label>
                             {{p.title}}

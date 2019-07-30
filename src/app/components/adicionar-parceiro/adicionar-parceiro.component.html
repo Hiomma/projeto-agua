@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar color="primary">
-        <ion-title>Adicionar Depoimento</ion-title>
+        <ion-title>Adicionar Parceiro</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -11,20 +11,12 @@
             <ion-input formControlName="nome" placeholder="Digite o título..."></ion-input>
         </ion-item>
         <ion-item class="itemAdicionar">
-            <ion-label class="labelCampo" position="stacked">Descrição</ion-label>
-            <ion-input formControlName="descricao" placeholder="Digite a descrição..."></ion-input>
-        </ion-item>
-        <ion-item class="itemAdicionar">
-            <ion-label class="labelCampo" position="stacked">Depoimento</ion-label>
-            <ion-textarea formControlName="depoimento" placeholder="Digite o depoimento..." rows="10"></ion-textarea>
-        </ion-item>
-        <ion-item class="itemAdicionar">
             <ion-label class="labelCampo">Ativado?</ion-label>
             <ion-toggle formControlName="ativado"></ion-toggle>
         </ion-item>
 
-        <ion-label class="labelCampo" style="font-weight: 500">Foto de Perfil</ion-label>
-        <input multiple="multiple" style="display: none" type="file" (change)="fotoDepoimento($event)" #fileInput>
+        <ion-label class="labelCampo" style="font-weight: 500">Foto do Parceiro</ion-label>
+        <input style="display: none" type="file" (change)="fotoParceiro($event)" #fileInput>
 
         <ion-grid style="margin-top: 20px; overflow: hidden;">
             <ion-row>
@@ -50,7 +42,7 @@
                 <ion-col>
                     <ion-button expand="block" class="buttonAlterar" [disabled]="resource.invalid"
                         (click)="adicionar()">
-                        {{atualizar ? "Alt." : "Add."}} Depoimento
+                        {{atualizar ? "Alt." : "Add."}} Parceiro
                     </ion-button>
                 </ion-col>
                 <ion-col>
