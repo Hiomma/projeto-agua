@@ -1,11 +1,11 @@
 <ion-app>
-    <ion-menu contentId="content1">
+    <ion-menu menuId="content1" content-id="content1">
         <ion-header>
             <ion-toolbar color="primary">
                 <ion-title>Menu</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content>
+        <ion-content id="content1">
             <ion-list>
                 <ion-menu-toggle auto-hide="false" *ngFor="let p of celular">
                     <ion-item (click)="irPagina(p)" style="cursor: pointer">
@@ -18,5 +18,25 @@
             </ion-list>
         </ion-content>
     </ion-menu>
+    <ion-menu menuId="crud" content-id="crud">
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content id="crud">
+            <ion-list>
+                <ion-menu-toggle auto-hide="false" *ngFor="let p of crud">
+                    <ion-item (click)="irPagina(p.url)" style="cursor: pointer;">
+                        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+                        <ion-label>
+                            {{p.title}}
+                        </ion-label>
+                    </ion-item>
+                </ion-menu-toggle>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
     <ion-router-outlet id="content1"></ion-router-outlet>
+    <ion-router-outlet id="crud"></ion-router-outlet>
 </ion-app>

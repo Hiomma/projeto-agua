@@ -57,6 +57,39 @@ export class AppComponent {
         },
     ]
 
+    crud = [
+        {
+            title: 'Notícias',
+            url: '/noticia-crud',
+            icon: 'ios-paper'
+        },
+        {
+            title: 'Posições',
+            url: '/posicao-crud',
+            icon: 'ios-expand'
+        },
+        {
+            title: 'Categorias',
+            url: '/categoria-crud',
+            icon: 'ios-filing'
+        },
+        {
+            title: 'Mensagens',
+            url: '/mensagem-crud',
+            icon: 'ios-chatboxes'
+        },
+        {
+            title: 'Parceiros',
+            url: "/parceiro-crud",
+            icon: 'ios-contacts'
+        },
+        {
+            title: "Sair",
+            url: "/login",
+            icon: "log-out"
+        }
+    ]
+
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,

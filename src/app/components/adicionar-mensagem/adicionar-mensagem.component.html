@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Adicionar Mensagem</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="resource">
+        <ion-item class="itemAdicionar">
+            <ion-label class="labelCampo" position="stacked">Nome</ion-label>
+            <ion-input formControlName="nome" placeholder="Digite o título..."></ion-input>
+        </ion-item>
+        <ion-item class="itemAdicionar">
+            <ion-label class="labelCampo" position="stacked">Titulo</ion-label>
+            <ion-input formControlName="titulo" placeholder="Digite a manchete..."></ion-input>
+        </ion-item>
+        <ion-item class="itemAdicionar">
+            <ion-label class="labelCampo" position="stacked">E-mail</ion-label>
+            <ion-input formControlName="email" placeholder="Digite a manchete..."></ion-input>
+        </ion-item>
+        <ion-item class="itemAdicionar">
+            <ion-label class="labelCampo" position="stacked">Mensagem</ion-label>
+            <ion-textarea formControlName="mensagem" placeholder="Digite a manchete..." rows="10"></ion-textarea>
+        </ion-item>
+    </form>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-button expand="block" class="buttonAlterar" [disabled]="resource.invalid"
+                        (click)="adicionar()">
+                        {{atualizar ? "Alt." : "Add."}} Mensagem
+                    </ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button expand="block" class="buttonCancelar" (click)="cancelar()">Cancelar</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>

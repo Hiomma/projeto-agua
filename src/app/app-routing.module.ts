@@ -12,6 +12,11 @@ const routes: Routes = [
     { path: 'objetivo', loadChildren: './objetivo/objetivo.module#ObjetivoPageModule' },
     { path: 'noticia-pagina', loadChildren: './noticia-pagina/noticia-pagina.module#NoticiaPaginaPageModule' },
     { path: 'noticia-detalhe', loadChildren: './noticia-pagina/noticia-detalhe/noticia-detalhe.module#NoticiaDetalhePageModule' },
+    { path: 'login', loadChildren: './painel/login/login.module#LoginPageModule' },
+    { path: 'categoria-crud', loadChildren: './painel/categoria-crud/categoria-crud.module#CategoriaCrudModule' },
+    { path: 'mensagem-crud', loadChildren: './painel/mensagem-crud/mensagem-crud.module#MensagemCrudModule' },
+    { path: 'noticia-crud', loadChildren: './painel/noticia-crud/noticia-crud.module#NoticiaCrudModule' },
+    { path: 'posicao-crud', loadChildren: './painel/posicao-crud/posicao-crud.module#PosicaoCrudModule' },
 ];
 
 @NgModule({
