@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { GraphQlService } from '../services/graphql/graph-ql.service';
-import { MenuController } from '@ionic/angular';
+import { MenuController, IonSlides } from '@ionic/angular';
 import { QueryService } from '../services/query/query.service';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
     styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
+
+    @ViewChild('slideFoto') slideFoto: IonSlides
 
     width = self.innerWidth;
     optionsSlide = { slidesPerView: 3 }
@@ -26,6 +28,7 @@ export class HomePage implements OnInit {
             this.optionsSlide = { slidesPerView: 1 }
         }
 
+        this.slideFoto.lockSwipes(true);
         this.menuController.close();
         this.menuController.enable(false);
 
@@ -44,5 +47,17 @@ export class HomePage implements OnInit {
 
     abrirSaibaMais() {
         this.route.navigate(["/somos"]);
+    }
+
+    moverSlide(direita: boolean) {
+        if (direita) {
+            this.slideFoto.lockSwipes(false);
+            this.slideFoto.slideNext(500);
+            this.slideFoto.lockSwipes(true);
+        } else {
+            this.slideFoto.lockSwipes(false);
+            this.slideFoto.slidePrev(500);
+            this.slideFoto.lockSwipes(true);
+        }
     }
 }

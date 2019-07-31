@@ -17,21 +17,24 @@
         <div class="divBarra"></div>
     </div>
 
-    <ion-slides [options]="optionsSlide" class="slidesNoticia">
+    <div style="position: relative">
+        <ion-slides #slideFoto [options]="optionsSlide" class="slidesNoticia">
 
-        <ion-slide (click)="abrirNoticia(aux)" *ngFor="let aux of listNoticias">
-            <img class="imgNoticias" [src]="aux.imagem">
-            <p class="pTituloNoticia">{{aux.manchete}}</p>
-            <div class="divCinza"></div>
-        </ion-slide>
+            <ion-slide (click)="abrirNoticia(aux)" *ngFor="let aux of listNoticias">
+                <img class="imgNoticias" [src]="aux.imagem">
+                <p class="pTituloNoticia">{{aux.manchete}}</p>
+                <div class="divCinza"></div>
+            </ion-slide>
 
-        <div class="divSetaEsquerda">
+        </ion-slides>
+
+        <div class="divSetaEsquerda" (click)="moverSlide(false)">
             <ion-icon name="ios-arrow-dropleft"></ion-icon>
         </div>
-        <div class="divSetaDireita">
+        <div class="divSetaDireita" (click)="moverSlide(true)">
             <ion-icon name="ios-arrow-dropright"></ion-icon>
         </div>
-    </ion-slides>
+    </div>
 
     <app-rodape></app-rodape>
 </ion-content>
