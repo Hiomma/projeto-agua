@@ -52,7 +52,7 @@ export class NoticiaCrudPage {
     }
 
     ionViewWillEnter() {
-        this.menuController.enable(true);
+        this.menuController.enable(true, "crud");
     }
 
     listar(pesquisa?) {

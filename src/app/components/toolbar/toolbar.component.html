@@ -16,11 +16,14 @@
                 <img class="imgLogo" src="../../../assets/imgs/logo.png">
             </div>
             <div class="divBotoes">
-                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('sobre', $event)">Sobre</ion-button>
+                <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('sobre', $event)">Sobre <ion-icon
+                        name="arrow-dropdown">
+                    </ion-icon>
+                </ion-button>
                 <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('noticia-pagina')">Notícias
                 </ion-button>
                 <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('transparencia', $event)">
-                    Transparência
+                    Transparência<ion-icon name="arrow-dropdown"> </ion-icon>
                 </ion-button>
                 <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('parceiros')">Parceiros</ion-button>
                 <ion-button fill="clear" class="buttonToolbar" (click)="abrirPagina('contato')">Contato</ion-button>

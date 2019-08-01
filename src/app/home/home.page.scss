@@ -100,6 +100,12 @@
     z-index: 99;
 }
 
+.divFrase {
+    text-align: center;
+    font-size: 18px;
+    color: var(--primary);
+}
+
 @media(max-width: 1000px) {
     .imgSlide {
         width: 100%;

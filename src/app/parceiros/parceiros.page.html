@@ -9,7 +9,7 @@
 
     <ion-grid style="margin-top: 50px; margin-bottom: 50px;">
         <ion-row>
-            <ion-col style="justify-content: center; display: flex" *ngFor="let aux of listParceiros">
+            <ion-col style="justify-content: center; display: flex" *ngFor="let aux of listParceiros" size="12" size-sm="3">
                 <div style="width: 300px;">
                     <img class="imgParceiros" [src]="aux.url">
                     <p class="pParceiros">{{aux.nome}}</p>
