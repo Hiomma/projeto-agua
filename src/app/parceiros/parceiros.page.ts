@@ -14,7 +14,7 @@ export class ParceirosPage implements OnInit {
     listParceiros: Array<any>
 
     width = self.innerWidth;
-    optionsSlide: any = { slidesPerView: 5, autoplay: true };
+    optionsSlide: any = { slidesPerView: 5, autoplay: true, loop: true };
 
     constructor(private graphql: GraphQlService,
         private menuController: MenuController,

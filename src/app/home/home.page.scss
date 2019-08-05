@@ -107,6 +107,30 @@
     margin-top: 30px;
 }
 
+.divSetaEsquerda{
+    position: absolute;
+    font-size: 70px;
+    color: white;
+    top: 150px;
+    left: 70px;
+    cursor: pointer;
+    z-index: 99;
+    background: rgba(0,0,0,0.4);
+    height: 70px;
+}
+
+.divSetaDireita{
+    position: absolute;
+    font-size: 70px;
+    color: white;
+    top: 150px;
+    right: 70px;
+    cursor: pointer;
+    z-index: 99;
+    background: rgba(0,0,0,0.4);
+    height: 70px;
+}
+
 @media(max-width: 1000px) {
     .imgSlide {
         width: 100%;
