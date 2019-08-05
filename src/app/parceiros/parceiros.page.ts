@@ -13,11 +13,18 @@ export class ParceirosPage implements OnInit {
 
     listParceiros: Array<any>
 
+    width = self.innerWidth;
+    optionsSlide: any = { slidesPerView: 5, autoplay: true };
+
     constructor(private graphql: GraphQlService,
         private menuController: MenuController,
         private query: QueryService) { }
 
     ngOnInit() {
+        if (this.width < 1000) {
+            this.optionsSlide = { slidesPerView: 1 }
+        }
+
         this.menuController.close();
         this.menuController.enable(false);
 

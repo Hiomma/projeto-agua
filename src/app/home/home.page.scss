@@ -96,7 +96,7 @@
     font-size: 20px;
     font-weight: 500;
     width: calc(100% - 70px);
-    text-align: justify;
+    text-align: left;
     z-index: 99;
 }
 
@@ -104,6 +104,7 @@
     text-align: center;
     font-size: 18px;
     color: var(--primary);
+    margin-top: 30px;
 }
 
 @media(max-width: 1000px) {

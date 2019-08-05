@@ -7,16 +7,18 @@
         <div class="divBackgroundCinza"></div>
     </div>
 
-    <ion-grid style="margin-top: 50px; margin-bottom: 50px;">
-        <ion-row>
-            <ion-col style="justify-content: center; display: flex" *ngFor="let aux of listParceiros" size="12" size-sm="3">
+    <div style="position: relative; margin-top: 50px; margin-bottom: 50px">
+        <ion-slides #slideFoto pager="true" [options]="optionsSlide">
+
+            <ion-slide *ngFor="let aux of listParceiros">
                 <div style="width: 300px;">
                     <img class="imgParceiros" [src]="aux.url">
                     <p class="pParceiros">{{aux.nome}}</p>
                 </div>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+            </ion-slide>
+
+        </ion-slides>
+    </div>
 
 
     <app-rodape></app-rodape>
