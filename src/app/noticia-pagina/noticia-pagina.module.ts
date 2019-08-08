@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { NoticiaPaginaPage } from './noticia-pagina.page';
 import { ComponentsModule } from '../components/components.module';
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 const routes: Routes = [
     {
@@ -20,6 +21,7 @@ const routes: Routes = [
         CommonModule,
         ComponentsModule,
         FormsModule,
+        TooltipModule,
         IonicModule,
         RouterModule.forChild(routes)
     ],

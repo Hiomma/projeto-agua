@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { MissaoPage } from './missao.page';
 import { ComponentsModule } from '../components/components.module';
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    TooltipModule,
     FormsModule,
     ComponentsModule,
     IonicModule,

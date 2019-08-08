@@ -1,12 +1,27 @@
 .imgParceiros {
     height: 231px;
-    width: 300px;
+    width: 200px;
     object-fit: scale-down;
 }
 
 .pParceiros {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color: var(--primary);
     font-weight: bold;
+}
+
+.divSlide {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    width: 80%;
+    margin-right: auto;
+}
+
+@media(max-width: 1000px) {
+    .divSlide {
+        width: 100%;
+    }
 }

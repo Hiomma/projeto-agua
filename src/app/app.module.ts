@@ -20,10 +20,11 @@ import { IonicStorageModule } from '@ionic/storage';
 import { ComponentsModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
-    imports: [   
+    imports: [
         BrowserModule,
         HttpClientModule,
         ComponentsModule,

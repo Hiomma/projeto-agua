@@ -6,12 +6,13 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { ComponentsModule } from '../components/components.module';
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        
+        TooltipModule,
         IonicModule,
         ComponentsModule,
         RouterModule.forChild([

@@ -10,13 +10,15 @@ import { AdicionarMensagemComponent } from './adicionar-mensagem/adicionar-mensa
 import { AdicionarParceiroComponent } from './adicionar-parceiro/adicionar-parceiro.component';
 import { AdicionarPosicaoComponent } from './adicionar-posicao/adicionar-posicao.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { TooltipModule } from 'ng2-tooltip-directive';
 
 @NgModule({
     imports: [
         IonicModule,
         ReactiveFormsModule,
         FormsModule,
-        CommonModule
+        CommonModule,
+        TooltipModule
     ],
     exports: [
         ToolbarComponent,
