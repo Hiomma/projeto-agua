@@ -6,18 +6,9 @@
     </ion-toolbar>
 </ion-header>
 <div class="divSlides">
-    <ion-slides #slideFoto>
-        <ion-slide>
-            <div><img src="../../../assets/imgs/noticia1.png" class="imgSlide"></div>
-        </ion-slide>
-        <ion-slide>
-            <div><img src="../../../assets/imgs/noticia2.png" class="imgSlide"></div>
-        </ion-slide>
-        <ion-slide>
-            <div><img src="../../../assets/imgs/noticia3.png" class="imgSlide"></div>
-        </ion-slide>
-        <ion-slide>
-            <div><img src="../../../assets/imgs/noticia4.png" class="imgSlide"></div>
+    <ion-slides #slideFoto style="height: 544px;">
+        <ion-slide *ngFor="let aux of listImagens">
+            <div><img [src]="aux.url" style="max-height: 544px;" class="imgSlide"></div>
         </ion-slide>
     </ion-slides>
     <div class="divSetaEsquerda" (click)="moverSlide(false)">

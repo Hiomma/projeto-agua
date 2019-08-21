@@ -16,7 +16,6 @@ export class ModalImagemComponent implements OnInit {
         private modalCtrl: ModalController) { }
 
     ngOnInit() {
-        console.log(this.objeto)
         this.listImagens = JSON.parse(JSON.stringify(this.objeto.imagens));
     }
 

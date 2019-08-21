@@ -19,8 +19,8 @@
         </div>
 
         <div style="position: relative">
-            <ion-slides #slideFoto [options]="optionsSlide">
-                <ion-slide *ngFor="let aux of listImagens">
+            <ion-slides #slideFoto [options]="optionsSlide" style="margin-bottom: 50px;">
+                <ion-slide *ngFor=" let aux of listImagens">
                     <img class="imgNoticia" [src]="aux.url" (click)="abrirImagem()">
                 </ion-slide>
 
