@@ -68,9 +68,9 @@ export class QueryService {
 
     getNoticiasPosicoesCategorias(ativado: string = "", filter: string = "") {
         if (ativado == "") {
-            return { query: " query rusbe($filter: String!){  noticias(filter: $filter) { id titulo manchete texto imagem url posicao { id nome ativado createdAt updatedAt } categoria { id nome ativado createdAt updatedAt } createdAt updatedAt  },  posicoes(ativado:true){ id nome ativado createdAt updatedAt  },  categorias(ativado:true){ id nome ativado createdAt updatedAt  }}", variables: { filter: filter } }
+            return { query: " query rusbe($filter: String!){  noticias(filter: $filter, ativado: true) { id titulo manchete texto imagem url posicao { id nome ativado createdAt updatedAt } categoria { id nome ativado createdAt updatedAt } createdAt updatedAt  },  posicoes(ativado:true){ id nome ativado createdAt updatedAt  },  categorias(ativado:true){ id nome ativado createdAt updatedAt  }}", variables: { filter: filter } }
         } else {
-            return { query: "query rusbe($ativado: Boolean!, $filter: String!){  noticias(ativado: $ativado, filter: $filter) { id titulo manchete texto imagem url posicao { id nome ativado createdAt updatedAt } categoria { id nome ativado createdAt updatedAt } createdAt updatedAt  },  posicoes(ativado:true){ id nome ativado createdAt updatedAt  },  categorias(ativado:true){ id nome ativado createdAt updatedAt  }}", variables: { ativado: ativado == "true" ? true : false, filter: filter } }
+            return { query: "query rusbe($filter: String!){  noticias(ativado: true, filter: $filter) { id titulo manchete texto imagem url posicao { id nome ativado createdAt updatedAt } categoria { id nome ativado createdAt updatedAt } createdAt updatedAt  },  posicoes(ativado:true){ id nome ativado createdAt updatedAt  },  categorias(ativado:true){ id nome ativado createdAt updatedAt  }}", variables: { ativado: ativado == "true" ? true : false, filter: filter } }
         }
     }
 
