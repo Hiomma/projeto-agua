@@ -28,7 +28,7 @@ export class ParceirosPage implements OnInit {
         this.menuController.close();
         this.menuController.enable(false);
 
-        this.graphql.graphql(this.query.getParceiros()).then((data: any) => {
+        this.graphql.graphql(this.query.getParceiros("true")).then((data: any) => {
             this.listParceiros = data.data.parceiros;
 
             this.listParceiros.forEach(element => element.url = environment.api + element.url)

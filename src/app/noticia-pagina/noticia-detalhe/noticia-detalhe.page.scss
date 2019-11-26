@@ -65,6 +65,7 @@
     bottom: 150px;
     z-index: 99;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .divSetaDireita {
@@ -77,6 +78,7 @@
     bottom: 150px;
     z-index: 99;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 @media(max-width: 1000px) {

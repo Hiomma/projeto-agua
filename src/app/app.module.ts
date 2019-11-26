@@ -19,6 +19,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { IonicStorageModule } from '@ionic/storage';
 import { ComponentsModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
         IonicStorageModule.forRoot({
             name: 'projeto-agua',
             driverOrder: ['websql', 'indexeddb']
-        })],
+        }),
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
     providers: [
         GraphQlService,
         QueryService,
